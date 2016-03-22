@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Graphik-Regular;
+  src: url('../fonts/Graphik-Regular.eot');
+  src: local("☺"), url('../fonts/Graphik-Regular.woff') format("woff"), url('../fonts/Graphik-Regular.ttf') format("truetype"), url('../fonts/Graphik-Regular.svg') format("svg");
+}
+
+@font-face {
+  font-family: Graphik-Semibold;
+  src: url('../fonts/Graphik-Semibold.eot');
+  src: local("☺"), url('../fonts/Graphik-Semibold.woff') format("woff"), url('../fonts/Graphik-Semibold.ttf') format("truetype"), url('../fonts/Graphik-Semibold.svg') format("svg");
+}
+
+// Typography
+$sans-serif: $helvetica;
+$serif: $georgia;
+$base-font-family: Graphik-Regular, $sans-serif;
+$header-font-family: Graphik-Semibold, $sans-serif;
+
+// Font Sizes
+$base-font-size: 1em;
+$h1-font-size: $base-font-size * 2.25;
+$h2-font-size: $base-font-size * 2;
+$h3-font-size: $base-font-size * 1.75;
+$h4-font-size: $base-font-size * 1.5;
+$h5-font-size: $base-font-size * 1.25;
+$h6-font-size: $base-font-size;
+
+// Line height
+$base-line-height: 1.438;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$base-z-index: 0;
+
+// Colors
+$blue: #477DCA;
+$dark-gray: #3f3e40;
+$medium-gray: #bfbfbf;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+$red: #e0415a;
+$red-purple: #45005d;
+$blue-purple: #5215a0;
+$light-purple: #C09BC2;
+$beige-gray: #d6d7d2;
+
+// Gradients
+// needs latest Compass, add '@import "compass"' to your scss
+// background-color: $red-purple // Old browsers
+// +filter-gradient($red-purple, $blue-purple, horizontal) // IE6-9
+// +background-image(linear-gradient(left,  $red-purple 0%,$red-purple 51%,$red-purple 51%,$blue-purple 100%))
+
+// Background Color
+$base-background-color: white;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $blue-purple;
+
+// Link Colors
+$base-link-color: $red;
+$hover-link-color: darken($red, 25);
+$base-button-color: $base-accent-color;
+$hover-button-color: lighten($base-accent-color, 15);
+
+// Flash Colors
+$alert-color: $light-yellow;
+$error-color: $light-red;
+$notice-color: lighten($base-accent-color, 40);
+$success-color: $light-green;
+
+// Border color
+$base-border-color: $medium-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: 0;
+$form-box-shadow: none;
+$form-box-shadow-focus: none;
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;

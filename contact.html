@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Contact form - Fusion Associates</title>
+        <meta name="description" content="" />
+        <meta name="description" content="Please use this form if you wish to discuss a potential hiring requirement for your business. " />
+    </head>
+
+    <body class="the-team">
+        <div class="row">
+            <div class="subpage-information">
+                <div class="subpage-header-block">
+                    <h1 ice:editable="line">Contact</h1> </div>
+                <div class="subpage-information-paragraph">
+                    <div>
+                        <div ice:editable="html" ice:options="bold, italic, unorderedlist, link">
+                            <p><strong>Please use this form if you wish to discuss a potential hiring requirement for your business.&nbsp;</strong> </p>
+                            <p>Experienced industry professionals wishing to send us their CV (resume) please <a href="/careers">click here</a>- this will
+                                enable us to process your details efficiently and quickly.
+                                <br /> </p>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr ice:editable="section">
+                                    <td ice:editable="line">Central Europe:</td>
+                                    <td ice:editable="line">+44 207 856 0070</td>
+                                </tr>
+                                <tr ice:editable="section">
+                                    <td ice:editable="line">Scandinavia:</td>
+                                    <td ice:editable="line">+46 8 408 39801&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br /> </div>
+                    <div class="row">
+                        <div id="contactMessage"></div>
+                        <form name="catwebformform76841" id="contactForm" method="post" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=10090&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}">
+                            <div class="row">
+                                <label for="FullName" ice:editable="line">Full Name</label>
+                                <input type="text" name="FullName" id="FullName" class="cat_textbox" maxlength="255" data-validation="required" data-validation-error-msg="Please enter your full name"> </div>
+                            <div class="row">
+                                <label for="CellPhone" ice:editable="line">Phone Number</label>
+                                <input type="text" name="CellPhone" id="CellPhone" class="cat_textbox" maxlength="255" data-validation="required" data-validation-error-msg="Please enter your phone number"> </div>
+                            <div class="row">
+                                <label for="EmailAddress" ice:editable="line">Email Address</label>
+                                <input type="text" name="EmailAddress" id="EmailAddress" class="cat_textbox" maxlength="255" data-validation="email" data-validation-error-msg="Please enter your email address"> </div>
+                            <div class="row">
+                                <label for="CAT_Custom_481885" ice:editable="line">Company</label>
+                                <input type="text" maxlength="4000" name="CAT_Custom_481885" id="CAT_Custom_481885" class="cat_textbox" data-validation="required" data-validation-error-msg="Please enter the company name"> </div>
+                            <div class="row">
+                                <label for="CAT_Custom_481884" ice:editable="line">Job Title</label>
+                                <input type="text" maxlength="4000" name="CAT_Custom_481884" id="CAT_Custom_481884" class="cat_textbox" data-validation="required" data-validation-error-msg="Please enter your job title"> </div>
+                            <div class="row">
+                                <label for="CAT_Custom_869" ice:editable="line">Message</label>
+                                <textarea name="CAT_Custom_869" id="CAT_Custom_869" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" data-validation="required" data-validation-error-msg="Please enter your message"></textarea>
+                            </div>
+                            <div class="row">
+                                <input class="cat_button" type="submit" value="Submit" id="catwebformbutton"> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="subpage-image"> <img ice:editable="image" src="/images/Berlin1b.jpg" alt="Contact" title="Contact"> </div>
+        </div>
+        <div class="row">{module_contentholder name="clients" ice:editable="content"}</div>
+    </body>
+
+</html>

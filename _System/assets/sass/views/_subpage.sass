@@ -1,0 +1,178 @@
+.subpage-information
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(6)
+
+  +media($large-screen)
+    +span-columns(5)
+    width: 40%
+    margin-right: 20px
+
+.subpage-image
+  +span-columns(12)
+  margin-right: 0 !important
+
+  +media($medium-screen)
+    +span-columns(6)
+
+  +media($large-screen)
+    +span-columns(7)
+    width: calc(60% - 20px)
+
+.subpage-column
+  +span-columns(12)
+  margin-top: 20px
+
+  +media($medium-screen)
+    +span-columns(6)
+    +omega(2n)
+
+    &:nth-child(2n+1)
+      padding-left: 20px
+
+    &:nth-child(1n+2)
+      padding-right: 20px
+
+  +media($large-screen)
+    +omega-reset(2n)
+    +span-columns(4)
+    +omega(3n)
+
+    &:nth-child(2n+1)
+      padding-left: 0
+
+    &:nth-child(1n+2)
+      padding-right: 0
+
+    &:nth-child(3n+1)
+      padding-left: 20px
+
+    &:nth-child(3n+2)
+      padding-left: 10px
+      padding-right: 10px
+
+    &:nth-child(3n+3)
+      padding-right: 20px
+
+.subpage-column-quarter
+  +span-columns(12)
+  margin-top: 20px
+
+  +media($medium-screen)
+    +span-columns(6)
+    +omega(2n)
+
+    &:nth-child(2n+1)
+      padding-left: 20px
+
+    &:nth-child(1n+2)
+      padding-right: 20px
+
+  +media($large-screen)
+    +omega-reset(2n)
+    +span-columns(3)
+    +omega(4n)
+
+    &:nth-child(2n+1)
+      padding-left: 0
+
+    &:nth-child(1n+2)
+      padding-right: 0
+
+    &:nth-child(4n+1)
+      padding-left: 20px
+
+    &:nth-child(4n+2), &:nth-child(4n+3)
+      padding-left: 10px
+      padding-right: 10px
+
+    &:nth-child(4n+4)
+      padding-left: 10px
+      padding-right: 10px
+
+.subpage-column-half
+  +span-columns(12)
+  margin-top: 20px
+
+  +media($medium-screen)
+    +span-columns(6)
+    +omega(2n)
+
+    &:nth-child(2n+1)
+      padding-left: 20px
+
+    &:nth-child(2n+2)
+      padding-right: 20px
+
+.subpage-column, .subpage-column-half, .subpage-column-quarter
+  .header
+    font-size: 25px
+    line-height: 28px
+    font-family: $base-font-family
+    border-bottom: 1px solid $dark-gray
+    margin-bottom: 12px
+
+  .subpage-column-image-container
+    float: left
+    width: 100%
+
+    img
+      float: left
+
+  a.subpage-column-image-container:hover
+    opacity: 0.75
+
+.subpage-header-block
+  float: left
+  width: 100%
+  border: 1px solid $dark-gray
+  padding: 20px
+  margin-bottom: 20px
+
+  h1
+    font-size: 25px
+    line-height: 30px
+    color: #58575A
+
+.subpage-information-paragraph
+  float: left
+  width: 100%
+  padding: 0px 20px
+
+.subpage-clients
+  float: left
+  width: 100%
+  background-color: $beige-gray
+  padding: 20px
+  margin-top: 20px
+
+  .client
+    +span-columns(12)
+    padding: 10px 50px
+
+    &:nth-child(1n+5)
+      display: none
+
+    +media($medium-screen)
+      display: table-cell
+      float: none
+      vertical-align: middle
+      width: 10%
+      padding: 1.5%
+      opacity: 0.65
+
+      &:nth-child(1n+4)
+        display: table-cell
+
+      img
+        width: 100%
+
+    &:first-child
+      padding-left: 0
+
+    &:last-child
+      padding-right: 0
+
+.intelligence-feature-header
+  min-height: 40px

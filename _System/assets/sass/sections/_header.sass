@@ -1,0 +1,126 @@
+header
+  float: left
+  margin-bottom: 20px
+
+#mobile-nav-button
+  background: none
+  float: right
+  padding: 0
+
+.header-branding-container, .header-navigation-container-desktop, .header-navigation-container-mobile
+  +span-columns(12)
+  padding: 15px
+
+  +media($large-screen)
+    +span-columns(6)
+    width: calc(50% - 10px)
+
+.header-branding-container  
+  background-color: $red-purple // Old browsers
+  // +filter($red-purple, $blue-purple, horizontal) // IE6-9
+  +background-image(linear-gradient(left,  $red-purple 0%,$blue-purple 100%))
+  color: #FFF
+  margin-bottom: 20px
+
+  +media($medium-screen)
+    margin-bottom: 0px
+    margin-right: 20px
+
+  .tagline
+    +span-columns(12)
+    margin-top: 25px
+
+    +media($medium-screen)
+      +span-columns(9)
+    
+    h1  
+      font-size: 25px
+      line-height: 30px
+
+  .symbol
+    display: none
+
+    +media($medium-screen)
+      display: block
+      float: right
+      width: 15%
+
+  .date
+    +row
+    float: left
+    margin-top: 8px
+    margin-bottom: 16px
+    color: $light-purple
+
+
+.header-navigation-container-desktop, .header-navigation-container-mobile
+  background-image: url(../images/menu-background.jpg)
+  background-size: cover
+
+  nav
+    float: left
+
+    li
+      line-height: 1.5em
+
+    a
+      font-size: 21px
+      color: #FFF
+
+      &:hover
+        color: $red
+
+  .header-search
+    float: left
+    opacity: 0.75
+
+    .search-box
+      float: left
+      width: 100%
+      padding: 0
+
+    .input-search
+      float: left
+      width: 83%
+      padding: 8px
+      margin: 0
+      border: none
+
+    .submit-search
+      float: left
+      width: 17%
+      background-color: #737474
+      padding: 5px
+      border-radius: 0
+      margin: 0
+
+      &:hover
+        background-color: lighten(#737474, 15)
+
+      img
+        height: 21px
+
+.header-navigation-container-mobile
+  display: block
+  margin-bottom: 20px
+  background-size: 1150px
+  +transition(height 2.0s)
+
+  +media($large-screen)
+    display: none
+
+  .header-search
+    width: 100%
+    margin-top: 20px
+
+.header-navigation-container-desktop
+  display: none
+
+  +media($large-screen)
+    display: block
+
+  nav
+    width: 60%
+
+  .header-search
+    width: 40%

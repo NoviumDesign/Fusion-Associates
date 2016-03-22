@@ -1,0 +1,56 @@
+//update in slider.sass
+.slider-category
+  margin-bottom: 5px
+
+//update in index.sass
+.survey-button
+  background-color: $blue-purple
+  border: none !important
+  color: #FFF !important
+
+  &:hover
+    background-color: lighten($blue-purple, 15) !important
+
+//update in blog.sass
+.blog-header-block, .subpage-header-block
+  border: none !important
+  border-bottom: 1px solid $dark-gray !important
+
+.post-content, .post-image
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(6)
+
+.footer-symbol
+  display: none
+  width: auto !important
+
+  +media($medium-screen)
+    display: block !important
+    float: right !important
+
+footer .main-footer-content
+  width: 100% !important
+  margin-top: 10px !important
+
+footer .footer-site-content
+  width: 100% !important
+
+.survey-description, .survey-full-column
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(8 of 12)
+
+.survey-third-column
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(4 of 12)
+
+  label
+    display: none
+
+.intelligence-feature-header
+  min-height: 40px

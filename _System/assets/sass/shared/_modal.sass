@@ -1,0 +1,43 @@
+#newslettermodal
+  display: none
+  background: #FFF
+  max-width: 95%
+  padding: 10px 15px
+
+  +media($medium-screen)
+    width: 75%
+    padding: 25px 35px
+
+  +media($large-screen)
+    width: 50%
+
+  h3
+    font-size: 20px
+    margin-bottom: 10px
+
+.cat_button
+  float: right
+  margin-top: 6px
+
+  &:hover
+    color: #FFF !important
+
+.modal-contact-info
+  margin-bottom: 15px
+
+.b-close
+  position: absolute
+  top: 0
+  right: 0
+  background-color: $base-accent-color
+  padding: 2px 8px
+
+  &:hover
+    cursor: pointer
+    background-color: lighten($base-accent-color, 15)
+
+  img
+    height: 12px
+
+.specific-newsletter-input-container
+  display: none

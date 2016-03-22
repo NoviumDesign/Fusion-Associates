@@ -1,0 +1,106 @@
+.post-list
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(8)
+
+.side-panel
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(4)
+    margin-right: 0
+
+  .header
+    font-size: 25px
+    line-height: 30px
+    font-family: $base-font-family
+    border-bottom: 1px solid $dark-gray
+    margin-bottom: 12px
+    margin-top: 20px
+
+    &:first-child
+      margin-top: 0
+
+  a
+    color: $red
+    font-family: $base-font-family
+
+    &:hover
+      color: lighten($red, 25)
+
+.blog-header-block
+  float: left
+  width: 100%
+  border: 1px solid $dark-gray
+  padding: 20px
+  margin-bottom: 20px
+
+  .post-details
+    font-family: $base-font-family
+    color: #58575A
+
+  h2
+    font-size: 25px
+    color: #58575A
+
+a.blog-header-block:hover //Styling for header-blocks in postlist, whick are links instead of ordinary div-blocks
+  background-color: darken(#FFF, 5)
+
+h1.blog-category
+  font-size: 16px
+  font-family: $base-font-family
+  padding: 0px 20px
+  margin-bottom: 5px
+
+.post-body
+  padding: 0px 20px
+
+.search-results
+  padding: 0px 20px
+
+.blog-post
+  float: left
+  max-width: 100%
+
+body.bloglist-body //Margin-bottom for blog posts in lists such as "archive" etc.
+  .blog-post
+    margin-bottom: 30px
+
+  footer
+    margin-top: 10px
+
+  h1.blog-category
+    font-size: 25px
+    line-height: 30px
+    font-family: Graphik-Regular, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
+
+.blog-header-block, .subpage-header-block
+  border: none !important
+  border-bottom: 1px solid $dark-gray !important
+
+.post-content, .post-image
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(6)
+
+.st_facebook_custom,
+.st_twitter_custom,
+.st_linkedin_custom,
+.st_googleplus_custom
+  background-repeat: no-repeat
+  background-position: left top
+	padding:0px 16px 0 0
+
+.st_facebook_custom
+  background-image: url("/_System/assets/icons/facebook.svg")
+
+.st_twitter_custom
+  background-image: url("/_System/assets/icons/twitter.svg")
+
+.st_linkedin_custom
+  background-image: url("/_System/assets/icons/linkedin.svg")
+
+.st_googleplus_custom
+  background-image: url("/_System/assets/icons/googleplus.svg")

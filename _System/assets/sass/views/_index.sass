@@ -1,0 +1,176 @@
+body.index footer
+  +media($medium-screen)
+    margin-top: 40px
+
+.read-more
+  color: $red
+
+  &:hover
+    color: lighten($red, 15)
+
+.index-content-container
+  +span-columns(12)
+  margin-top: 15px
+
+.people-moves-container, .news-container, .newsletter-container
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(6)
+    +omega(2n)
+
+  +media($large-screen)
+    +omega-reset(2n)
+    +span-columns(4)
+
+.people-moves-container, .news-container
+
+  .header
+    font-size: 25px
+    line-height: 28px
+    font-family: $base-font-family
+    border-bottom: 1px solid $dark-gray
+
+.people-moves-row
+  +row
+  margin-top: 12px
+  margin-bottom: 22px
+
+.people-moves-image
+  +clearfix
+  display: none
+
+  +media($medium-screen)
+    +span-columns(2 of 6)
+    position: relative
+    display: inline-block
+    overflow: hidden
+    border-radius: 150px
+
+  .one-to-one-ratio
+    margin-top: 100%
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+.people-moves-content
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(4 of 6)
+
+  h3
+    font-size: 16px
+
+    a
+      color: $base-font-color
+
+      &:hover
+        color: lighten($base-font-color, 15)
+
+  .date
+    font-family: $base-font-family
+  
+.news-row
+  +row
+  margin-top: 12px
+
+  h3
+    font-size: 16px
+
+    a
+      color: $base-font-color
+
+      &:hover
+        color: lighten($base-font-color, 15)
+
+  .date
+    font-family: $base-font-family
+
+.newsletter-container
+  .header
+    float: left
+    padding: 15px 20px 20px 20px
+
+    +media($medium-screen)
+      padding: 0 20px 20px 20px
+
+    h2
+      +span-columns(10)
+      font-size: 25px
+      line-height: 30px
+
+    img
+      +span-columns(2)
+
+  .newsletter-box
+    float: left
+    padding: 20px
+    // needs latest Compass, add '@import "compass"' to your scss
+    background-color: #dbdbdb // Old browsers
+    // @include filter-gradient(#dbdbdb, #ffffff, horizontal); // IE6-9 fallback on horizontal gradient
+    @include background-image(linear-gradient(left,  #dbdbdb 0%,#ffffff 100%))
+
+    h3
+      font-size: 16px
+
+    .survey-button
+      text-align: center
+      font-family: $header-font-family
+      color: $base-font-color
+      float: left
+      padding: 12px
+      margin-bottom: 16px
+      border: 1px solid $dark-gray
+
+      &:hover
+        background-color: transparentize($dark-gray, 0.75)
+
+    .newsletter-input
+      float: left
+      width: 60%
+      padding: 12px
+      border: none
+
+      +media($medium-screen)
+        width: 70%
+
+    .newsletter-submit
+      float: left
+      width: 40%
+      padding: 13px
+      border-radius: 0px
+      border: none
+      background-color: #737474
+
+      +media($medium-screen)
+        width: 30%
+
+      &:hover
+        background-color: lighten(#737474, 15)
+
+  .social-media-row
+    float: left
+    margin-top: 12px
+
+    a
+      float: left
+      margin-left: 12px
+
+      &:first-child
+        margin-left: 0px
+
+      &:hover
+        opacity: 0.5
+
+.survey-button
+  background-color: $blue-purple
+  border: none !important
+  color: #FFF !important
+
+  &:hover
+    background-color: lighten($blue-purple, 15) !important

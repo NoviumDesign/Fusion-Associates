@@ -1,0 +1,27 @@
+<body class="bloglist-body">
+<div class="blog-post">
+    <div class="post-content">
+    <a href="{{ url }}" class="blog-header-block">
+      <h2 class="post-title"> {{ title }} </h2>
+        <div class="post-details"> {{ date | date: "%d MMM yyyy" }} </div>
+  	</a>
+        <div class="post-body"> {{ body | strip_html | truncate: 250 }}
+      <a href="{{ url }} "class="read-more">Go to post</a>
+    <!-- <div class="links">
+      <a href="{tag_permalinkonly}#comments">Comments ({tag_commentcount})</a> | <a href="{tag_permalinkonly}#trackbacks">Trackbacks ({tag_trackbackcount})</a> | {tag_permalink}
+    </div> -->
+  	</div>
+    </div>
+    <div class="post-image">
+        <img src="
+			{% assign slider_image_url = body | escape %}
+			{% assign slider_image_url = slider_image_url | split: 'img src=&quot;' %}
+			{% assign slider_image_url = slider_image_url[1] | split: '&quot;' %}
+			{% assign slider_image_url = slider_image_url[0] | remove: '//' %}
+			{% assign slider_image_url = slider_image_url | remove: 'http:' %}
+			{% assign slider_image_url = slider_image_url | remove: 'fusionassociates.noviumplatform.se' %}
+			{{ slider_image_url }}
+		?Action=thumbnail&amp;Width=380&amp;Height=318&amp;algorithm=fill_proportional&amp;bc_t=sRkbfv9lOnmhiCuASG%2bXv" alt="blog-image">
+    </div>
+</div>
+</body>

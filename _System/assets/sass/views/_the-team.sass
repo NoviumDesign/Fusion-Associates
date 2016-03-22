@@ -1,0 +1,39 @@
+.employee
+  +span-columns(12)
+  margin-top: 20px
+
+  +media($large-screen)
+    +span-columns(6)
+    +omega(2n)
+    margin-top: 14px
+
+    &:nth-child(2n+1)
+      padding-left: 20px
+
+    &:nth-child(1n+2)
+      padding-right: 20px
+
+.employee-grid
+  +span-columns(12)
+  margin-right: 0 !important
+
+  +media($medium-screen)
+    +span-columns(6)
+
+  +media($large-screen)
+    +span-columns(7)
+    width: calc(60% - 20px)
+
+  .header
+    font-size: 21px
+    line-height: 28px
+    font-family: $base-font-family
+    border-bottom: 1px solid $dark-gray
+    margin-bottom: 12px
+
+  .employee-image-container
+    float: left
+    width: 100%
+
+    img
+      float: left

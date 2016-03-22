@@ -1,0 +1,21 @@
+<div class="blog-container">
+    <h1 class="blog-category">{{ title | capitalize | replace: 'And', '&amp;' }}</h1> 
+    <!-- <p class="description">{tag_blogdescription}</p> -->
+    <div class="wrapper clear">
+        <div class="post-list">{tag_postlist}
+            <p class="page-nav">{tag_previouspage} {tag_pagination} {tag_nextpage}</p>
+        </div>
+        <div class="side-panel">
+            <h4 class="header">Q&amp;A sessions</h4>
+				{module_blogpostlist blogId="13501" rowCount="5" template="/_System/assets/templates/blog-sidebar-post-feed.tpl"}
+            <h4 class="header">People moves</h4>
+				{module_blogpostlist blogId="13502" rowCount="5" template="/_System/assets/templates/blog-sidebar-post-feed.tpl"}
+            <h4 class="header">Features</h4>
+				{module_blogpostlist blogId="13503" rowCount="5" template="/_System/assets/templates/blog-sidebar-post-feed.tpl"}
+            <h4 class="header">Archive</h4> {tag_blogpostarchive}</div>
+    </div>
+    <!-- END .wrapper -->
+</div>
+<!-- END .blog-container -->
+
+<!--<pre>{{this | json}}</pre>-->

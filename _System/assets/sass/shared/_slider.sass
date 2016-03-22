@@ -1,0 +1,83 @@
+.slider-container
+  +span-columns(12)
+  position: relative
+
+.slider
+  +span-columns(12)
+
+.slider-item
+  +span-columns(12)
+
+.category-showcase
+  float: left
+  margin-bottom: 3px
+  width: 100%
+
+.slider-image
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(8)
+
+  img
+    width: 100%
+
+.slider-content
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(4)
+
+  .slider-category, .slider-text
+    +row
+    padding: 0px 20px
+
+  .slider-header
+    background-color: $blue-purple
+    float: left
+    width: 100%
+    padding: 20px
+
+    &:hover
+      background-color: lighten($blue-purple, 20)
+
+    .date
+      font-family: $header-font-family
+      color: #FFF
+
+    h2
+      font-size: 25px
+      line-height: 30px
+      color: #FFF
+
+  .slider-text
+    float: left
+    margin-top: 20px
+
+.owl-controls
+  position: relative
+
+.owl-buttons
+  position: absolute
+  top: 0
+  width: 100%
+
+.owl-prev, .owl-next
+  position: absolute
+  top: 0
+  padding: 0 !important
+  margin: 0 !important
+  background: none !important
+
+.owl-prev
+  left: 0
+
+.owl-next
+  right: 0
+
+.owl-theme .owl-controls .owl-page span
+  width: 8px
+  height: 8px
+
+.slider-category
+  margin-bottom: 5px

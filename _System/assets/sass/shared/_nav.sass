@@ -1,0 +1,73 @@
+// Menu item colors & settings
+$main-menu-color: #FFF
+$main-menu-background-color: transparent
+// Hover colors
+$main-menu-hover-color: $red
+$main-menu-hover-background-color: $main-menu-background-color
+
+// Active colors
+$main-menu-active-color: $red
+$main-menu-active-background-color: $main-menu-hover-background-color
+
+header .main-menu
+  float: left
+  clear: left
+
+
+header .main-menu ul
+  > li
+    position: relative
+    float: left
+    clear: left
+
+    a
+      float: left
+      clear: left
+      padding-right: 10px
+
+  li a
+    display: block
+    color: $main-menu-color
+    background-color: $main-menu-background-color
+
+header .main-menu ul li:hover
+
+  a:hover
+    background-color: $main-menu-hover-background-color
+    color: $main-menu-hover-color
+    -webkit-transition: all 0.2s
+    -moz-transition: all 0.2s
+    transition: all 0.2s
+
+  ul
+    display: block
+
+header .main-menu ul a:active
+  background-color: $main-menu-active-background-color
+  color: $main-menu-active-color
+
+/* -- level mark -- */
+
+header .main-menu ul ul
+  display: none
+  position: absolute
+  min-width: 210px
+  top: -10px
+  left: 100%
+  background-color: $dark-gray
+  padding: 10px
+  z-index: 1
+
+header .main-menu ul ul li
+  font-weight: normal
+
+// Mobile main Menu
+header .mobile-main-menu ul li ul
+  margin-left: 10px
+
+.mobile-nav-container
+  float: left
+  display: none
+  
+.active
+  display: block

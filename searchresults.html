@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search results</title>
+        <meta name="description" content="" />
+    </head>
+    <body>
+        <div class="post-list">
+            <div class="blog-header-block">
+      			<h2 class="post-title">Search results</h2>
+ 		 	</div>
+            	{module_searchresults}
+        </div>
+		<div class="side-panel">
+            <h4 class="header">Recent posts</h4> {module_blogsitepost rowCount="5" template="/_System/assets/templates/searchlist-sidepanel-blogfeed.tpl"}
+            <h4 class="header">List of blogs</h4> {module_blog filter="all" template="/_System/assets/templates/searchlist-sidepanel-blogfeed.tpl"}
+        </div>
+    </body>
+</html>
