@@ -85,13 +85,46 @@ body.bloglist-body //Margin-bottom for blog posts in lists such as "archive" etc
   +media($large-screen)
     +span-columns(6)
 
+.blog-footer
+  padding: 20px
+  border-top: 1px solid $dark-gray !important
+  text-align: center
+
+  +media($large-screen)
+    text-align: left
+
+    .blog-sharing,
+    .blog-sharing > span,
+    .blog-sharing-icons
+      display: inline-block
+
+  .blog-sharing-icons
+    margin-bottom: 20px
+
+    +media($large-screen)
+      margin: 0
+
+  .button
+    +media($large-screen)
+      margin-top: -10px
+      float: right
+
 .st_facebook_custom,
 .st_twitter_custom,
 .st_linkedin_custom,
 .st_googleplus_custom
   background-repeat: no-repeat
   background-position: left top
-	padding:0px 16px 0 0
+  padding: 9px 20px
+  margin-left: 8px
+
+  &:hover,
+  &:focus
+    cursor: pointer
+    opacity: 0.75
+
+  &:first-child
+    margin-left: 0
 
 .st_facebook_custom
   background-image: url("/_System/assets/icons/facebook.svg")

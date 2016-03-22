@@ -3,12 +3,20 @@
       <h2 class="post-title"> {{ title }} </h2>
       <div class="post-details"> {{ date | date: "%d MMM yyyy" }} </div>
   </div>
-    <div class="post-body">
-      {{ body }}
-      <span class='st_facebook_large' displayText='Facebook'></span>
-      <span class='st_twitter_large' displayText='Tweet'></span>
-      <span class='st_linkedin_large' displayText='LinkedIn'></span>
-      <span class='st_googleplus_large' displayText='Google +'></span>
+  <div class="post-body">
+    {{ body }}
+  </div>
+  <div class="blog-footer">
+    <div class="blog-sharing">
+      <div class="blog-sharing-icons">
+        <span class='st_facebook_custom' displayText='Facebook'></span>
+        <span class='st_twitter_custom' displayText='Tweet'></span>
+        <span class='st_linkedin_custom' displayText='LinkedIn'></span>
+        <span class='st_googleplus_custom' displayText='Google +'></span>
+      </div>
+    </div>
+
+    <a href="/contact" class="button">Interested in recruitment?</a>
   </div>
 </div>
 <!-- END .blog-post -->

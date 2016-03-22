@@ -24,15 +24,15 @@ $(document).ready(function () {
 });
 
 // Current Date
-var m_names = new Array("January", "February", "March", 
-"April", "May", "June", "July", "August", "September", 
+var m_names = new Array("January", "February", "March",
+"April", "May", "June", "July", "August", "September",
 "October", "November", "December");
 
 var d = new Date();
 var curr_date = d.getDate();
 var curr_month = d.getMonth();
 var curr_year = d.getFullYear();
-document.getElementById("date").innerHTML=(curr_date + " " + m_names[curr_month] 
+document.getElementById("date").innerHTML=(curr_date + " " + m_names[curr_month]
 + " " + curr_year);
 
 // Validation
@@ -60,6 +60,10 @@ $(document).ready(function() {
 
     $.validate({
       form : '#awardSurvey'
+    });
+
+    $.validate({
+      form : '.sidebarForm'
     });
 
 });
@@ -120,8 +124,8 @@ $('.sendFormButton').click(function () {
 });
 
 // Form submission
-$(document).ready(function() { 
-    $('.newsletterRegistration').ajaxForm(function() { 
+$(document).ready(function() {
+    $('.newsletterRegistration').ajaxForm(function() {
         $('.newsletterMessage').addClass('success').fadeIn().html('<p><strong>You are now subscribed to out newsletter!</strong></p>');
         $('.newsletterMessageModal').addClass('success').fadeIn().html('<p>You are now subscribed to our general newsletter! Please complete the ‘Career discipline’ &amp; ‘Sector’ fields carefully to further customise your newsletter and receive items of interest specific to you.</p>');
         $('#newslettermodal').bPopup({
@@ -133,38 +137,45 @@ $(document).ready(function() {
         // Store email adress
         var emailInput = $('.newsletter-input').val();
         $('.specific-newsletter-input').val(emailInput);
-    });  
+    });
 });
 
-$(document).ready(function() { 
+$(document).ready(function() {
     $('#resumeForm').ajaxForm(function() {
         $('#resumeMessage').addClass('success').fadeIn().html('<p><strong>Your information was sent successfully!</strong></p>');
         dataLayer.push({'event': 'resumeSent'});
         $('#resumeForm').fadeOut();
-    });  
+    });
 });
 
-$(document).ready(function() { 
-    $('#contactForm').ajaxForm(function() { 
-        $('#contactMessage').addClass('success').fadeIn().html('<p><strong>Thank you for your message, we will return to you as soon as possible!</strong></p>');
+$(document).ready(function() {
+    $('#contactForm').ajaxForm(function() {
+        $('#contactMessage').addClass('success').fadeIn().html('<p><strong>Thanks for your message, we will return to you as soon as possible!</strong></p>');
         $('#contactForm').fadeOut();
-    });  
+    });
 });
 
-$(document).ready(function() { 
-    $('.specificNewsletterRegistration').ajaxForm(function() { 
+$(document).ready(function() {
+    $('.specificNewsletterRegistration').ajaxForm(function() {
         $('.specificNewsletterMessage').addClass('success').fadeIn().html('<p><strong>The information was sent successfully!</strong></p>');
         dataLayer.push({'event': 'signupTwo'});
         $('.specificNewsletterRegistration').fadeOut();
         $('.newsletterMessage').fadeOut();
         $('.newsletterMessageModal').fadeOut();
-    });  
+    });
 });
 
-$(document).ready(function() { 
-    $('#awardSurvey').ajaxForm(function() { 
+$(document).ready(function() {
+    $('#awardSurvey').ajaxForm(function() {
         $('#surveyMessage').addClass('success').fadeIn().html('<p><strong>The information was sent successfully!</strong></p>');
         dataLayer.push({'event': 'awardSent'});
         $('#awardSurvey').fadeOut();
-    });  
+    });
+});
+
+$(document).ready(function() {
+    $('.sidebarForm').ajaxForm(function() {
+        $('.sidebarMessage').addClass('success').fadeIn().html('<p><strong>Thanks for your message, we will return to you as soon as possible!</strong></p>');
+        $('.sidebarForm').fadeOut();
+    });
 });
