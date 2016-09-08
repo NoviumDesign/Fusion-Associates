@@ -2,17 +2,32 @@
 button,
 input[type="submit"] {
   @extend %button;
-  @include appearance(none);
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  padding: 0.75em 1.35em;
-  border-radius: 0;
+}
 
-  &:hover,
-  &:focus {
-    color: #fff;
+.button-purple a {
+  @extend %button;
+}
+
+.button-grey a {
+  @extend %button;
+  background-color: #737474;
+  &:hover {
+    background-color: lighten(#737474, 15);
+  }
+}
+
+.button-blue a {
+  @extend %button;
+  background-color: #137eb9;
+  &:hover {
+    background-color: lighten(#137eb9, 15);
+  }
+}
+
+.button-red a {
+  @extend %button;
+  background-color: $base-link-color;
+  &:hover {
+    background-color: lighten($base-link-color, 15);
   }
 }

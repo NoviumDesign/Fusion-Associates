@@ -1,18 +1,28 @@
 %button {
+  @include appearance(none);
   -webkit-font-smoothing: antialiased;
   background-color: $base-button-color;
-  border-radius: $base-border-radius;
+  border-radius: 0;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
   color: white;
   display: inline-block;
   font-size: $base-font-size;
   font-weight: bold;
   line-height: 1;
-  padding: 0.75em 1em;
+  padding: 0.75em 1.35em;
   text-decoration: none;
 
   &:hover {
     background-color: $hover-button-color;
     color: white;
+  }
+
+  &:focus {
+    color: #fff;
   }
 
   &:disabled {
